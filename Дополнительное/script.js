@@ -34,7 +34,7 @@ forms.onsubmit = (event) => {
     if(arr.length == 0) {
         setTimeout(() => {
             submit()
-        }, 2000);
+        }, 1000);
 
     }
 
@@ -62,6 +62,7 @@ function submit() {
     // create element
     let givGradient = []
 
+    
     const container = document.querySelector('.card_box')
     const box = document.createElement('div')
     container.style.display = 'block'
@@ -84,7 +85,19 @@ function submit() {
     name.className = 'name'
     name.innerHTML = user.name
     box.append(name)
-
-    // end createElement
-    console.log(container);
+    
+    // img.onclick = () => {
+    //     let a = Array(number).slice(3, 9)
+    //     img.setAttribute('src', './eye2.png')
+    //     img.onclick = () => {
+    //         img.setAttribute('src', './eye.png')
+    //     }
+    // }
+    let boxes = document.querySelectorAll('.card')
+    boxes[1].classList.add('active')
+    boxes[2].classList.add('active_gradient')
+    if(boxes.length >= 4) {
+        alert('Your Limit 3 cards')
+        box.remove()
+    }
 }
