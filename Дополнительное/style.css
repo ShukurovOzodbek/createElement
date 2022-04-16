@@ -102,3 +102,10 @@ p{
     color: red;
     display: none;
 }
+
+.active{
+    background: linear-gradient(270deg,#2F276F, #AE3565);
+}
+.active_gradient{
+    background: linear-gradient(270deg, #134A4E, #2FCE90);
+}
